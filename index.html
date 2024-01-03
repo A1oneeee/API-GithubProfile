@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish&display=swap">
+	<script type="module" src="script.js"></script>
+    <title>Affichage d'un utilisateur GitHub</title>
+  </head>
+
+  <body>
+	<div class="top">
+		<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/1200px-Font_Awesome_5_brands_github.svg.png'>
+		<h1>
+			Affichage de profil GitHub
+		</h1>
+	</div>
+	<div class="input">
+		<h2>
+			Veuillez rentrer le nom d'utilisateur :
+		</h2>
+		<div class="input-center">
+			<input id="input-user" type="text" required minlength="1"/>
+			<button id="btn-find" class="btn-find">Rechercher</button>
+		</div>
+	</div>
+	<article>
+		<h2>
+			Voici les informations trouvées sur :
+		</h2>
+		<h3 class="pseudo"></h3>
+		<main>
+			<div class="left">
+				<p>Photo de profil</p>
+				<p>ID</p>
+				<p>Nom</p>
+				<p>Nombre de répertoires publiques</p>
+				<p>Compte créer depuis</p>
+			</div>
+			<div class="right">
+				<img class="imagePP"  alt='pic'>
+				<p id="id-user"></p>
+				<p id="nom-user"></p>
+				<p id="rep-user"></p>
+				<p id="date-user"></p>
+			</div>
+		</main>
+		<div class="bottom">
+			
+		</div>
+	</article>
+  </body>
+</html>
