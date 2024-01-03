@@ -21,10 +21,19 @@ boutonAfficher.addEventListener('click', function () {
 			return reponse.json();
 		})
 		.then(data => {
+			const dateDonnee = new Date(data.created_at);
+			const dateActuelle = new Date();
+			const millisecondsDateDonnee = dateDonnee.getTime();
+			const millisecondsDateActuelle = dateActuelle.getTime();
+			const differenceMilliseconds = millisecondsDateActuelle - millisecondsDateDonnee;
+			const differenceJours = Math.floor(differenceMilliseconds / (1000 * 60 * 60 * 24));
+			
+			
+			
 			imageElement.src = data.avatar_url ?? "";
 			idElement.innerText = data.id ?? "";
 			nomElement.innerText = data.name ?? "";
 			repElement.innerText = data.public_repos ?? "";
-			dateElement.innerText = data.created_at ?? "";
+			dateElement.innerText = `${differenceJours} jours` ?? "";
 		})
 });
